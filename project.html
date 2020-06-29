@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECT</title>
+     <!-- CSS Section -->
+     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+     <link rel="stylesheet" href="./Contents/app.css">
+</head>
+<body>
+<!-- Main Navigation -->
+    
+        <header>
+          <div class="container">
+            <nav class="navbar navbar-expand-lg">
+    
+                <a class="navbar-brand" href="index.html">
+                  <img src="./Assets/images/logo.png" width="70" height="60" alt="Logo" loading="lazy">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html"><i class="fas fa-home fa-lg"></i> Home</a>
+                    </li>
+    
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html"><i class="fas fa-phone-square fa-lg"></i> Contact Me</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html"><i class="fas fa-address-book fa-lg"></i> My Projects</a>
+                    </li>
+                    
+                    </li>
+                  </ul>
+                </div>
+                </div>
+              </nav>
+        </header>
+        
+    
+        <main>
+            
+            <!-- MAIN (Center website) -->
+
+
+  <h1>AakritiG.com</h1>
+  
+  
+  <!-- Portfolio Gallery Grid -->
+  <h2>My Favourite Projects</h2>
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('dance')"> Indian Dance</button>
+  <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+  <button class="btn" onclick="filterSelection('people')"> People</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column dance">
+    <div class="content">
+      <img src="./Assets/images/dPic1.JPG" alt="Dance" style="width:100%">
+      <h4>Indian Classical Dance</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column dance">
+    <div class="content">
+      <img src="./Assets/images/dPic2.jpeg" alt="Dancing" style="width:100%">
+      <h4>Indian Folk Dance</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column dance">
+    <div class="content">
+      <img src="./Assets/images/dPic3.jpeg" alt="Dancing" style="width:100%">
+      <h4>Indo-Contemporary</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="column cars">
+    <div class="content">
+      <img src="/w3images/cars1.jpg" alt="Car" style="width:100%">
+      <h4>Retro</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
+      <h4>Fast</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column cars">
+    <div class="content">
+      <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
+      <h4>Classic</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+
+  <div class="column people">
+    <div class="content">
+      <img src="/w3images/people1.jpg" alt="People" style="width:100%">
+      <h4>Girl</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+      <img src="/w3images/people2.jpg" alt="People" style="width:100%">
+      <h4>Man</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+  <div class="column people">
+    <div class="content">
+      <img src="/w3images/people3.jpg" alt="People" style="width:100%">
+      <h4>Woman</h4>
+      <p>Lorem ipsum dolor..</p>
+    </div>
+  </div>
+<!-- END GRID -->
+        </main>
+
+         <!-- JavaScript Section -->
+
+    <!-- 3rd Party JavaScript Libraries -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- App Scripts -->
+    <script src="./Scripts/app.js"></script>
+    
+</body>
+</html>

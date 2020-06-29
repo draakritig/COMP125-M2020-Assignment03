@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT</title>
+     <!-- CSS Section -->
+     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+     <link rel="stylesheet" href="./Contents/app.css">
+</head>
+<body>
+<!-- Main Navigation -->
+    
+        <header>
+          <div class="container">
+            <nav class="navbar navbar-expand-lg">
+    
+                <a class="navbar-brand" href="index.html">
+                  <img src="./Assets/images/logo.png" width="70" height="60" alt="Logo" loading="lazy">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="index.html"><i class="fas fa-home fa-lg"></i> Home</a>
+                    </li>
+    
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html"><i class="fas fa-phone-square fa-lg"></i> Contact Me</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="project.html"><i class="fas fa-address-book fa-lg"></i> My Projects</a>
+                    </li>
+                    
+                    </li>
+                  </ul>
+                </div>
+                </div>
+              </nav>
+        </header>
+        
+    
+        <main>
+            <div class="container">
+                <div class="jumbotron">
+                    <h1 class="display-8">Tell Me About Yourself!</h1>               
+                    <div class="container" id="jumbo">
+                    
+                      <form action="index.html">
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="firstname">First Name</label>
+                            <input type="fname" class="form-control" id="name" placeholder="Your first name..">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="lastname">Last Name</label>
+                            <input type="lname" class="form-control" id="name" placeholder="Your last name..">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputEmail">Email</label>
+                          <input type="email" class="form-control" id="inputEmail" placeholder="johngregory@abc.ca">
+                        </div>
+                        <div class="form-group">
+                          <label for="inputNumber">Phone Number</label>
+                          <input type="phone number" class="form-control" id="inputNumber" placeholder="123-456-7890">
+                        </div>
+                        <div class="form-group">
+                       <label for="comments">Your valuable comments 
+                        <textarea id="comments" class="form-control" placeholder="Write something.." ></textarea></label>
+                      </div>
+                      <div class="form-group">
+                      <label><input name="btnSubmit" tabindex="12" type="submit" value="Submit"></label>
+                      <label><input name="btnReset" tabindex="13" type="reset" value="Clear Form"></label></form>
+                       </div>                   
+                      </form>
+                    </div>
+            </div>
+        </main>
+
+         <!-- JavaScript Section -->
+
+    <!-- 3rd Party JavaScript Libraries -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- App Scripts -->
+    <script src="./Scripts/app.js"></script>
+    
+</body>
+</html>
