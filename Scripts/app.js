@@ -1,5 +1,5 @@
 {
-    console.log('%cApp Started...', "color:white; font-size: 24px;");   
+    console.log('%cAssignment02', "color:white; font-size: 24px;");   
 
    let title = document.title;
 
@@ -21,36 +21,86 @@
     }
    }
 
-   // step 1 hook into the spot (element) on the page
-   let jumbotron = document.getElementsByClassName("jumbotron")[0];
-  
-
-   // step 2 create a new element
-   let newParagraph = document.createElement("p");
-   
-   // step 3 configure the new element
-   newParagraph.textContent = title;
-
-   // step 4 attach the new element
-   jumbotron.appendChild(newParagraph);
 } 
 // Adding content to biopage
-(function(){
-  function Strings()
-  {
-      let h1String = "Aakriti Gupta";
-      document.getElementsByTagName("h1")[0].innerHTML = h1String;
-      let pString = `Something about me:
-I'm student of Health Informatics Technology program at Centennial College.`;
-      document.getElementsByTagName("p")[0].innerHTML = pString;
+let h1Text = "Aakriti Gupta";
+document.getElementById("h1Text").innerHTML = h1Text;
+let biographyText1 = 
+`I'm student of Health Informatics Technology program at Centennial College.
+ I am always excited to learn and implement new things in life.
+ I learn from my experiences.
+ My Background:
+ Bachelors in Dental Surgery (2009-2014).
+ Masters in Hospital Administration(2014-2016).
+ Worked for 2.5 years as Quality and Safety Executive
+
+ My Hobbies:
+ I am an Indian Classical Dancer and a vocalist.
+ I love travelling and exploring new cuisines.
+ I like watching movies. My favourite genres are- Horror, Thriller and Comedy.
+
+ My Favourite Book:
+ One book that changed my lifeand inspired me is The Secret by Rhonda Bryne
+
+ My Favourite Quote:
+ "Live in the moment, Live in the breath"
+ `
+document.getElementById("biographyText1").innerText = biographyText1;
  
-  }
-  console.log("reached here...");
-  window.addEventListener("load", Strings);
-  
+/*Javascript for Contact page*/
+function validateForm()
+    {
+        let contactForm = document.forms[0];
 
-})();
+        if(contactForm)
+        {
+            contactForm.noValidate = true;
 
+            let errorMessage = document.getElementById("errorMessage");
+
+            let firstName = document.getElementById("firstName");
+            firstName.addEventListener("blur", (event) => 
+            {
+                if(firstName.value.length < 2)
+                {
+                    firstName.focus();
+                    errorMessage.hidden = false;
+                    errorMessage.textContent = "Please enter a Valid First Name with a length of 2 or more characters"; 
+                }
+                else
+                {
+                    errorMessage.hidden = true;
+                }
+            });
+
+            let lastName = document.getElementById("lastName");
+            lastName.addEventListener("blur", (event) => 
+            {
+                if(lastName.value.length < 2)
+                {
+                    lastName.focus();
+                    errorMessage.hidden = false;
+                    errorMessage.textContent = "Please enter a Valid Last Name with a length of 2 or more characters"; 
+                }
+                else
+                {
+                    errorMessage.hidden = true;
+                }
+            });
+
+
+
+            // creates a "hook" or reference to the button element with an id of "submitButton"
+            let submitButton = document.getElementById("submitButton");
+
+            submitButton.addEventListener("click", (event) =>
+            {
+                event.preventDefault();
+                console.log("Submit Button Clicked");
+            });
+        }
+        return false;
+    }
 
 /*Javascript for Project page*/
 filterSelection("all") // Execute the function and show all columns
@@ -58,7 +108,7 @@ function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("column");
   if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  // Adding the "show" class (display:block) to the filtered elements, and removing the "show" class from the elements that are not selected
   for (i = 0; i < x.length; i++) {
     RemoveClass(x[i], "show");
     if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
@@ -90,7 +140,7 @@ function RemoveClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-// Add active class to the current button (highlight it)
+// Added active class to the current button 
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
 for (var i = 0; i < btns.length; i++) {

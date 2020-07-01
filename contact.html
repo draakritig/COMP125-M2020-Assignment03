@@ -46,38 +46,42 @@
     
         <main>
             <div class="container">
-                <div class="jumbotron">
-                    <h1 class="display-8">Tell Me About Yourself!</h1>               
-                    <div class="container" id="jumbo">
-                    
+                
+                    <h1 class="display-9">Tell Me About Yourself!</h1>               
                       <form action="index.html">
                         <div class="form-row">
                           <div class="form-group col-md-6">
-                            <label for="firstname">First Name</label>
-                            <input type="fname" class="form-control" id="name" placeholder="Your first name..">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="firstName" aria-describedby="firstName" 
+                            placeholder="Enter your first name" required autofocus>
                           </div>
                           <div class="form-group col-md-6">
-                            <label for="lastname">Last Name</label>
-                            <input type="lname" class="form-control" id="name" placeholder="Your last name..">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" aria-describedby="lastName"
+                            placeholder="Enter your last name" required>
                           </div>
                         </div>
                         <div class="form-group">
-                          <label for="inputEmail">Email</label>
-                          <input type="email" class="form-control" id="inputEmail" placeholder="johngregory@abc.ca">
+                          <label for="emailAddress">Email</label>
+                          <input type="email" class="form-control" id="emailAddress" aria-describedby="emailAddress"
+                          placeholder="johngregory@abc.ca" required>
                         </div>
                         <div class="form-group">
-                          <label for="inputNumber">Phone Number</label>
-                          <input type="phone number" class="form-control" id="inputNumber" placeholder="123-456-7890">
+                          <label for="contactNumber">Contact Number</label>
+                          <input type="tel" class="form-control" id="contactNumber" aria-describedby="contactNumber"
+                          placeholder="123-456-7890">
                         </div>
                         <div class="form-group">
-                       <label for="comments">Your valuable comments 
-                        <textarea id="comments" class="form-control" placeholder="Write something.." ></textarea></label>
+                       <label for="shortMessage">Your valuable comments 
+                        <textarea id="shortMessage" class="form-control" aria-describedby="shortMessage"
+                        placeholder="Write something.." ></textarea></label>
                       </div>
                       <div class="form-group">
-                      <label><input name="btnSubmit" tabindex="12" type="submit" value="Submit"></label>
-                      <label><input name="btnReset" tabindex="13" type="reset" value="Clear Form"></label></form>
-                       </div>                   
+                      <label><button id="submitButton" type="submit" class="btn btn-outline-primary" ><i class="far fa-paper-plane"></i> Send</button></label>
+                      <label><button id="resetButton" type="reset" class="btn btn-outline-warning" ><i class="far fa-trash-alt"></i>Reset</button></label>
                       </form>
+                       </div>                   
+                      
                     </div>
             </div>
         </main>
