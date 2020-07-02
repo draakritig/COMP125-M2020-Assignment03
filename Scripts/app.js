@@ -1,8 +1,8 @@
 /* File Name- COMP125- Assignment02
 * Author's Name- Aakriti Gupta
-* Website Name- Biography
-* Description- This project consists of three webpages 
-consisting of a biography page(home), contact page and projects page. 
+* Website Name- Personal Biography
+* Description- This file consists of functionality and text contents of three webpages 
+ index page(biography), contact page and projects page. 
 */
 
 {
@@ -36,33 +36,17 @@ if(document.getElementById("myName"))
 {let myName = "Aakriti Gupta";
 document.getElementById("myName").innerHTML = myName;
 }
-if(document.getElementById("biographyText1"))
-{let biographyText1 = 
+if(document.getElementById("welcomeMessage"))  
+{let welcomeMessage = "Welcome To My Page";
+document.getElementById("welcomeMessage").innerHTML = welcomeMessage;
+}
+if(document.getElementById("biographyText"))
+{let biographyText = 
 `I'm student of Health Informatics Technology program at Centennial College.
- I am always excited to learn and implement new things in life.
  I learn from my experiences.
-
- My Background:
- Bachelors in Dental Surgery (2009-2014).
- Masters in Hospital Administration(2014-2016).
- Worked for 2.5 years as Quality and Safety Executive
-
- My Aim:
- To become a successful Healthcare IT Professional.
- I have dream of opening my own Dancing school named "NatyaKriti".
-
- My Hobbies:
- I am an Indian Classical Dancer and a vocalist.
- I love travelling and exploring new cuisines.
- I like watching movies. My favourite genres are- Horror, Thriller and Comedy.
-
- My Favourite Book:
- One book that changed my life and inspired me is "The Secret" by Rhonda Bryne
-
- My Favourite Quote:
- "Live in the moment, Live in the breath"
+ My Aim is to become a successful Healthcare IT Professional.
  `;
-document.getElementById("biographyText1").innerText = biographyText1;
+document.getElementById("biographyText").innerText = biographyText;
 }
 }
 /*Javascript for Contact page*/
@@ -120,51 +104,7 @@ function validateForm()
         return false;
     }
 
-/*Javascript for Project Page*/
-filterSelection("all"); // Executing the function and show all columns
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  // Adding the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    removeClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) addClass(x[i], "show");
-  }
-}
-// Show filtered elements
-function addClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
-}
-// Hide elements that are not selected
-function removeClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+
 
 /*Adding content to the Project page*/
 /*Adding content under Main*/
@@ -172,13 +112,8 @@ mainProject();
 function mainProject(){
 if(document.getElementById("projectHeading"))
 {
-  let projectHeading = "These are my projects";
+  let projectHeading = "MY PROJECTS";
  document.getElementById("projectHeading").innerHTML = projectHeading;
-}
-if(document.getElementById("projectHeading1"))
-{
- let projectHeading1 = `Click on "show all" to view my projects`;
- document.getElementById("projectHeading1").innerHTML = projectHeading1;
 }
 /*Description of all the projects*/
 if(document.getElementById("projectDescription"))
@@ -191,12 +126,11 @@ Project 2- Rescuing Dogs
 This is an on-going project which I started with my father and brother when I was in my homecountry India.
 
 Project 3- Photography
-I have lately discovered this talent inside me and soon going to open my own instagram account.
-I am yet to explore this side of mine but I am hopeful of experiencing some great things on my way.`;
+I have lately discovered this talent inside me and soon going to open my own instagram account.`;
 document.getElementById("projectDescription").innerText = projectDescription;
 }
 }
-/*Adding content for Project 1*/
+/*Adding content to Project 1*/
 Project1();
 function Project1() {
 if(document.getElementById("danceName1"))
@@ -229,8 +163,18 @@ if(document.getElementById("danceText3"))
   let danceText3 ="I have even raised money by participating in charity functions.";
   document.getElementById("danceText3").innerHTML = danceText3;
 }
+if(document.getElementById("danceName4"))
+{
+  let danceName4 ="Bollywood Dance";
+  document.getElementById("danceName4").innerHTML = danceName4;
 }
-/*Adding content for Project 2*/
+if(document.getElementById("danceText4"))
+{
+  let danceText4 ="Later or sooner I intend to open my dancing school.";
+  document.getElementById("danceText4").innerHTML = danceText4;
+}
+}
+/*Adding content to Project 2*/
 Project2();
 function Project2() {
 if(document.getElementById("dogName1"))
@@ -263,8 +207,18 @@ if(document.getElementById("dogText3"))
   let dogText3 ="Taking measures so that all these precious souls can get a good and happy life.";
   document.getElementById("dogText3").innerHTML = dogText3;
 }
+if(document.getElementById("dogName4"))
+{
+  let dogName4 ="Meet Brownie";
+  document.getElementById("dogName4").innerHTML = dogName4;
 }
-/*Adding content for Project 3*/
+if(document.getElementById("dogText4"))
+{
+  let dogText4 ="Every dog deserves to be loved.";
+  document.getElementById("dogText4").innerHTML = dogText4;
+}
+}
+/*Adding content to Project 3*/
 Project3();
 function Project3() {
   if(document.getElementById("photoName1"))
@@ -280,6 +234,11 @@ function Project3() {
   {
     let photoName3 ="Royality";
     document.getElementById("photoName3").innerHTML = photoName3;
+  }
+  if(document.getElementById("photoName4"))
+  {
+    let photoName4 ="Lush Green";
+    document.getElementById("photoName4").innerHTML = photoName4;
   }
 }
 
