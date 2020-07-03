@@ -104,8 +104,6 @@ function validateForm()
         return false;
     }
 
-
-
 /*Adding content to the Project page*/
 /*Adding content under Main*/
 mainProject();
@@ -223,7 +221,7 @@ Project3();
 function Project3() {
   if(document.getElementById("photoName1"))
   {
-    let photoName1 ="The Burning Desire";
+    let photoName1 ="The Lost Stone";
     document.getElementById("photoName1").innerHTML = photoName1;
   }
   if (document.getElementById("photoName2")) {
