@@ -1,7 +1,7 @@
 /* File Name- COMP125- Assignment02
 * Author's Name- Aakriti Gupta
 * Website Name- Personal Biography
-* Description- This file consists of functionality and text contents of three webpages 
+* Description- This file provides the functionality to all the three webpages 
  index page(biography), contact page and projects page. 
 */
 
@@ -49,60 +49,6 @@ if(document.getElementById("biographyText"))
 document.getElementById("biographyText").innerText = biographyText;
 }
 }
-/*Javascript for Contact page*/
-function validateForm()
-    {
-        let contactForm = document.forms[0];
-
-        if(contactForm)
-        {
-            contactForm.noValidate = true;
-
-            let errorMessage = document.getElementById("errorMessage");
-
-            let firstName = document.getElementById("firstName");
-            firstName.addEventListener("blur", (event) => 
-            {
-                if(firstName.value.length < 2)
-                {
-                    firstName.focus();
-                    errorMessage.hidden = false;
-                    errorMessage.textContent = "Please enter a Valid First Name with a length of 2 or more characters"; 
-                }
-                else
-                {
-                    errorMessage.hidden = true;
-                }
-            });
-
-            let lastName = document.getElementById("lastName");
-            lastName.addEventListener("blur", (event) => 
-            {
-                if(lastName.value.length < 2)
-                {
-                    lastName.focus();
-                    errorMessage.hidden = false;
-                    errorMessage.textContent = "Please enter a Valid Last Name with a length of 2 or more characters"; 
-                }
-                else
-                {
-                    errorMessage.hidden = true;
-                }
-            });
-
-
-
-            // creates a "hook" or reference to the button element with an id of "submitButton"
-            let submitButton = document.getElementById("submitButton");
-
-            submitButton.addEventListener("click", (event) =>
-            {
-                event.preventDefault();
-                console.log("Submit Button Clicked");
-            });
-        }
-        return false;
-    }
 
 /*Adding content to the Project page*/
 /*Adding content under Main*/
