@@ -1,12 +1,32 @@
-/* File Name- COMP125- Assignment02
+
+
+/* File Name- COMP125-Assignment 03
 * Author's Name- Aakriti Gupta
-* Website Name- Personal Biography
+* Website Name- Mini Portfolio Site - JSON Data & AJAX Components
 * Description- This file provides the functionality to all the three webpages 
  index page(biography), contact page and projects page. 
 */
-
+function highlightActiveLink(id) 
 {
-    console.log('%cAssignment02', "color:white; font-size: 24px;");   
+    let navAnchors = document.querySelectorAll("li a");
+
+    for (const anchor of navAnchors) 
+    {
+     anchor.className = "nav-link";
+    }
+
+    for (const anchor of navAnchors) 
+    {
+        let anchorString = anchor.getAttribute("id");
+
+        if (id === anchorString)
+        {
+            anchor.className = "nav-link active";
+        }
+    }
+}
+  {
+    console.log('%cAssignment03', "color:white; font-size: 24px;");   
 
    let title = document.title;
 
@@ -27,9 +47,55 @@
         anchor.className = "nav-link active";
     }
    }
+  } 
+//--------DISPLAY CONTENTS-------------
+    let xhrContent;
+    //This function reads data from the paragraphs.json file and aligns them with their 
+     // respective ID's with the innerHTML using the if statement 
 
-} 
-// Adding content to biopage
+    function readParagraphs() 
+    {
+        if ((xhrContent.readyState === 4) && (xhrContent.status === 200)) 
+        {
+
+            let MyContent = JSON.parse(xhrContent.responseText);
+            let paragraphs = MyContent.paragraphs;
+            paragraphs.forEach(function (paragraph) 
+            {
+                let paragraphElements = document.getElementById(paragraph.id);
+                //looks for the element id and aligns it with the paragraphs in the html
+                if(paragraphElements) 
+                {
+                     paragraphElements.innerHTML = paragraph.content;
+                }
+               
+            }, this);
+        }
+    }
+    //This functions loads data from the paragraph.json file to the html file
+    function loadContent()
+    {
+      xhrContent = new XMLHttpRequest();
+      xhrContent.open("GET","Scripts/paragraphs.json",true);
+      xhrContent.send(null);
+      xhrContent.addEventListener("readystatechange",readParagraphs);
+    }
+    function initialize() 
+    { 
+     //calls the loadData function 
+        loadContent();
+     };
+     //loads the init function after loading all the html functions 
+    window.addEventListener("load",initialize);
+
+//--------------- HEADER--------------------------------
+//--------------- FOOTER--------------------------------
+
+
+
+
+
+/*Adding content to biopage
 bioContent();
 function bioContent(){
 if(document.getElementById("myName"))  
@@ -49,17 +115,17 @@ if(document.getElementById("biographyText"))
 document.getElementById("biographyText").innerText = biographyText;
 }
 }
-
+*/
 /*Adding content to the Project page*/
-/*Adding content under Main*/
+/*Adding content under Main
 mainProject();
 function mainProject(){
 if(document.getElementById("projectHeading"))
 {
   let projectHeading = "MY PROJECTS";
  document.getElementById("projectHeading").innerHTML = projectHeading;
-}
-/*Description of all the projects*/
+}*/
+/*Description of all the projects
 if(document.getElementById("projectDescription"))
 {
 let projectDescription = 
@@ -73,8 +139,8 @@ Project 3- Photography
 I have lately discovered this talent inside me and soon going to open my own instagram account.`;
 document.getElementById("projectDescription").innerText = projectDescription;
 }
-}
-/*Adding content to Project 1*/
+}*/
+/*Adding content to Project 1
 Project1();
 function Project1() {
 if(document.getElementById("danceName1"))
@@ -92,7 +158,7 @@ if(document.getElementById("danceName2"))
   let danceName2 ="Indian Folk Dance";
   document.getElementById("danceName2").innerHTML = danceName2;
 }
-if(document.getElementById("danceText1"))
+if(document.getElementById("danceText2"))
 {
 let danceText2 ="I have participated in many competitions and won many awards and appreciations.";
 document.getElementById("danceText2").innerHTML = danceText2;
@@ -117,8 +183,8 @@ if(document.getElementById("danceText4"))
   let danceText4 ="Later or sooner I intend to open my dancing school.";
   document.getElementById("danceText4").innerHTML = danceText4;
 }
-}
-/*Adding content to Project 2*/
+}*/
+/*Adding content to Project 2
 Project2();
 function Project2() {
 if(document.getElementById("dogName1"))
@@ -161,8 +227,8 @@ if(document.getElementById("dogText4"))
   let dogText4 ="Every dog deserves to be loved.";
   document.getElementById("dogText4").innerHTML = dogText4;
 }
-}
-/*Adding content to Project 3*/
+}*/
+/*Adding content to Project 3
 Project3();
 function Project3() {
   if(document.getElementById("photoName1"))
@@ -184,5 +250,6 @@ function Project3() {
     let photoName4 ="Lush Green";
     document.getElementById("photoName4").innerHTML = photoName4;
   }
-}
+}*/
+
 

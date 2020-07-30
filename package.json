@@ -1,5 +1,5 @@
 {
-  "name": "assignment_02",
+  "name": "assignment_03",
   "version": "1.0.0",
   "description": "Three page project",
   "main": "index.js",
@@ -10,5 +10,6 @@
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1"
-  }
+  },
+  "repository": "https://github.com/draakritig/COMP125-M2020-Assignment03.git"
 }

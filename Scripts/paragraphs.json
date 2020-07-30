@@ -1,0 +1,73 @@
+{
+  "paragraphs":
+  [
+    {
+        "id":"myName",
+        "content": "Aakriti Gupta"
+    },
+    {
+        "id":"welcomeMessage",
+        "content": "Welcome To My Page"
+    },
+    {
+        "id":"biographyText",
+        "content": "I'm student of Health Informatics Technology program at Centennial College. \nI learn from my experiences. \nMy Aim is to become a successful Healthcare IT Professional."
+    },
+    {
+        "id":"projectHeading",
+        "content": "MY PROJECTS"
+    },
+    {
+        "id":"projectDescription",
+        "content": "Project 1- Dancing \nI am dancing since the age of 5 years and that has being my passion all along till now. \n\nProject 2- Rescuing Dogs\nThis is an on-going project which I started with my father and brother when I was in my homecountry India.\n\nProject 3- Photography\nI have lately discovered this talent inside me and soon going to open my own instagram account."
+    },
+    {
+        "id":"danceName1",
+        "content": "Indian Classical Dance"
+    },
+    {
+        "id":"danceName2",
+        "content": "Indian Folk Dance"
+    },
+    {
+        "id":"danceName3",
+        "content": "Indo-Contemporary Dance"
+    },
+    {
+        "id":"danceName4",
+        "content": "Bollywood Dance"
+    },
+    {
+        "id":"dogName1",
+        "content": "Meet Cookie"
+    },
+    {
+        "id":"dogName2",
+        "content": "Meet Peanut"
+    },
+    {
+        "id":"dogName3",
+        "content": "Meet Oreo"
+    },
+    {
+        "id":"dogName4",
+        "content": "Meet Brownie"
+    },
+    {
+        "id":"photoName1",
+        "content": "The Lost Stone"
+    },
+    {
+        "id":"photoName2",
+        "content": "Into the Wild"
+    },
+    {
+        "id":"photoName3",
+        "content": "Royality"
+    },
+    {
+        "id":"photoName4",
+        "content": "Lush Green"
+    }
+  ]
+}
