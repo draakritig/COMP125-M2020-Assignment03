@@ -11,7 +11,7 @@
     },
     {
         "id":"biographyText",
-        "content": "I'm student of Health Informatics Technology program at Centennial College. \nI learn from my experiences. \nMy Aim is to become a successful Healthcare IT Professional."
+        "content": "<p>I'm student of Health Informatics Technology program at Centennial College.</p> <p>I learn from my experiences.</p> <p>My Aim is to become a successful Healthcare IT Professional.</p>"
     },
     {
         "id":"projectHeading",
@@ -19,7 +19,7 @@
     },
     {
         "id":"projectDescription",
-        "content": "Project 1- Dancing \nI am dancing since the age of 5 years and that has being my passion all along till now. \n\nProject 2- Rescuing Dogs\nThis is an on-going project which I started with my father and brother when I was in my homecountry India.\n\nProject 3- Photography\nI have lately discovered this talent inside me and soon going to open my own instagram account."
+        "content": "<h4>Project 1- Dancing</h4> I am dancing since the age of 5 years and that has become my passion all along till now.<h4>Project 2- Rescuing Dogs</h4>This is an on-going project which I started with my father and brother when I was in my homecountry India.<h4>Project 3- Photography</h4>I have lately discovered this talent inside me and soon going to open my own instagram account."
     },
     {
         "id":"danceName1",
@@ -68,6 +68,11 @@
     {
         "id":"photoName4",
         "content": "Lush Green"
+    },
+    {
+        "id":"contactHeading",
+        "content":"Tell Me About Yourself!"       
     }
   ]
 }
+

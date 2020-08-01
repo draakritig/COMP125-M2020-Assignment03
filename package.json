@@ -5,7 +5,8 @@
   "main": "index.js",
   "author": "Aakriti Gupta",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": 
+  {
     "@fortawesome/fontawesome-free": "^5.13.1",
     "bootstrap": "^4.5.0",
     "jquery": "^3.5.1",
