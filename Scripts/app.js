@@ -7,15 +7,13 @@
  index page(biography), contact page and projects page. 
 */
 "use strict";
+//------------CONSOLE DISPLAY--------------------------
 displayOutput();
 function displayOutput()
 {
-    console.log('%cAssignment03', "color:white; font-size: 24px;");   
-
+    console.log('%cAssignment03', "color:ivory; background-color:purple ;font-size: 24px;");   
    let title = document.title;
-
    title = title.toLowerCase();
-
    console.log(`The title of the page is ${title}`);
 }
 
